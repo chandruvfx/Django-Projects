@@ -1,0 +1,50 @@
+.detail{
+    min-height: 100vh;
+}
+.portfolio-img img{
+    right: 0;
+    border-radius: 1em;
+    position: absolute;
+    margin-right: 15rem;
+}
+
+
+.detail-card .reviewer-name{
+    font-size: 5rem;
+    margin: 10px 10px;
+}
+.detail-card .web-url{
+    margin: 10px 20px;
+    display: inline;
+}
+.detail-card p a{
+    color: brown;
+    font-size: 2rem;
+}
+.detail-card .stars{
+    margin-left: 20px;
+    display: inline;
+    font-size: 22px;
+}
+
+.detail-card .rating{
+    display: none;
+}
+
+
+.detail-card .stars .active{
+    color: darksalmon;
+}
+
+.review-cont{
+    margin: 20px 40px;
+    /* border: 2px saddlebrown solid; */
+    width: 65%;
+    height: 75vh;
+}
+
+.review-cont p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 200px;
+}

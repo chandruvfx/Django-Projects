@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles  %}
+    <link rel="stylesheet" href={% static "review\index.css" %}>
+{% endblock %}
+{% block main %}
+    <form action="/" method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        {% for form in forms %}
+            <div class="form-ctrls {% if form.errors %}errors{% endif %}">
+                <!-- Only Show Widget fields not rating and upload image -->
+                {% if form.label != "Rating" and form.label != "Upload Your Image" %}
+                    {{ form.label_tag }}
+                    {{ form }}
+                    {{ form.errors }}
+                <!-- Upload Image field enhanced with drag and drop functionality-->
+                {% elif form.label == "Upload Your Image" %}
+                        {{ form.label_tag }}
+                        <div id="drop-area">
+                            <p>Drag and drop files here</p>
+                            <p>or</p>
+                            {{ form }}
+                            {{ form.errors }}
+                            <div class="file-list" id="fileList"></div>
+                        </div>
+                <!--Rating Field is replaced with custom Stars-->
+                {% else %}
+                    {{ form.label_tag }}
+                    <div class="stars inactive">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    {{ form.errors }}
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class='btn-submit'>Submit</button>
+    </form>
+{% endblock %}

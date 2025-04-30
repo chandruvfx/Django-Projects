@@ -1,0 +1,82 @@
+.form-ctrls, .btn-submit{
+    margin: 1rem 20rem;
+}
+.form-ctrls label{
+    display: block;
+}
+.form-ctrls input{
+    width: 40%;
+    height: 2rem;
+    font-size: medium;
+    border-radius: 10px;
+}
+.form-ctrls input:focus, textarea:focus{
+    background-color: rgba(255, 166, 125, 0.047);
+}
+
+.form-ctrls textarea{
+    width: 40%;
+    border-radius: 10px;
+
+}
+
+.btn-submit{
+    margin: 1rem 30rem;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.errorlist{
+    color: rgb(255, 134, 78);
+    list-style: none;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+.stars{
+    display: flex;
+    gap: 15px;
+    font-size: 55px;
+    color: rgb(99, 99, 99);
+}
+
+.stars span.active {
+    color: #ff9c1a;
+  }
+
+/* Drop Down File Upload CSS*/
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #333;
+    width: 40%;
+}
+
+#drop-area.highlight {
+    border-color: #6c6;
+    background-color: #f0fff0;
+}
+
+#fileElem {
+    display: none;
+}
+
+.file-list {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#drop-area input[type="file"]{
+    width: 160px; 
+    color: rgba(0, 0, 0, 0);  /* Remove no file choosen */
+}
+#drop-area input[type="file"]::file-selector-button{
+    background: rgb(83, 81, 80);
+    color: white;
+    border: 1px solid rgb(83, 81, 80);
+    border-radius: 5px;
+    padding: 0.6rem 1.5rem;
+}

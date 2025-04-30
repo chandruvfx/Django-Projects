@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "review\listreviews.css" %}">
+{% endblock %}
+{% block main %}
+<section>
+    <h3> Review's</h3>
+    <article  class='cont-review'>
+        <ul class='user-review'>
+            {% for users in reviews  %}
+                <li>
+                    <a href="{% url "detailview" users.pk %}"><img src="{{ users.profile_image.url }}"></a>
+                    <div class='cont-infos'>
+                        <p class='par-username'>{{ users.user_name | title }}</p>
+                        <p>Website: {{ users.web_url }}</p>
+                        <p>Rating: {{ users.rating }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+</section>    
+{% endblock %}
