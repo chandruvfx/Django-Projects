@@ -7,6 +7,7 @@ A Simple Review Project Developed inside django project with the purpose of achi
 ### Important Deployment settings 
 
 Django:
+______
 
 settings.py
 ```
@@ -15,4 +16,12 @@ ALLOWED_HOSTS = ['127.0.0.10']
 ```
 have to execute  ```python manage.py collectstatic```
 ---
+
+Apache Server Side
+__________________
+
+1. Goto C:\Windows\System32\drivers\etc
+2. Open ```hosts``` file
+3. Add at the end of the section
+
 
