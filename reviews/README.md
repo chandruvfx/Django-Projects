@@ -1,6 +1,6 @@
-# First Reviews Django Project
+# First Django Project - Reviews
 
-## Used mod_msgi and Apache for deployment
+## Used mod_msgi and Apache for deployment (Windows)
 
 A Simple Review Project Developed inside django project with the purpose of achieving conect js, fetch, html, css
 
@@ -64,6 +64,10 @@ __________________
     
         WSGIScriptAlias / "D:\django_projects\reviews\reviews\wsgi.py" 
     </VirtualHost>
+   ```
+6. Restart apache server
+   ```
+      httpd -k restart
    ```
    
 
