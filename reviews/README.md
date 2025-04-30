@@ -4,11 +4,15 @@
 
 A Simple Review Project Developed inside django project with the purpose of achieving conect js, fetch, html, css
 
-### Deployment settings 
+### Important Deployment settings 
 
 Django:
 
-```settings.py
+settings.py
+```
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.10']
 ```
+have to execute  ```python manage.py collectstatic```
+---
+
